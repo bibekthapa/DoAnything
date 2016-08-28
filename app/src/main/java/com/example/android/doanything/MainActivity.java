@@ -9,30 +9,29 @@ import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ToggleButton tglBtn1,tglBtn2;
-    private Button btn1;
+    private ToggleButton toggle_button_1,toggle_button_2;
+    private Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        newOnClicListener();
 
-        addListenerOnButton();
 
     }
-
-    public void addListenerOnButton()
+    public void newOnClicListener()
     {
-        tglBtn1=(ToggleButton)findViewById(R.id.togglebtn1);
-        tglBtn2=(ToggleButton)findViewById(R.id.togglebtn2);
-        btn1=(Button)findViewById(R.id.btn1);
+        toggle_button_1=(ToggleButton)findViewById(R.id.toggle_btn_1);
+        toggle_button_2=(ToggleButton)findViewById(R.id.toggle_btn_2);
+        button=(Button)findViewById(R.id.button1);
 
-        btn1.setOnClickListener(new View.OnClickListener() {
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                StringBuffer result=new StringBuffer(); //String Buffer is like a string but can be modified.The length and content can be modified using certain method calls
-                result.append("toggleButton1:").append(tglBtn1.getText());// toggleButton1: status of the toggle button1(oN or OFF)
-                result.append("\ntoggleButton1:").append(tglBtn2.getText());
+                StringBuffer result= new StringBuffer();
+                result.append("Toggle Button 1:").append(toggle_button_1.getText());
+                result.append("\n Toggle Button 2: ").append(toggle_button_2.getText());
                 Toast.makeText(MainActivity.this,result.toString(),Toast.LENGTH_SHORT).show();
             }
         });
@@ -40,4 +39,5 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
 }
