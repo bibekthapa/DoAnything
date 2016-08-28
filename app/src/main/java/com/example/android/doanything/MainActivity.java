@@ -9,35 +9,41 @@ import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ToggleButton toggle_button_1,toggle_button_2;
-    private Button button;
+    private ToggleButton toggle_Button_1,toggle_Button_2;
+    private Button button1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        newOnClicListener();
+        onClicListener();
+
 
 
     }
-    public void newOnClicListener()
-    {
-        toggle_button_1=(ToggleButton)findViewById(R.id.toggle_btn_1);
-        toggle_button_2=(ToggleButton)findViewById(R.id.toggle_btn_2);
-        button=(Button)findViewById(R.id.button1);
 
-        button.setOnClickListener(new View.OnClickListener() {
+    public void onClicListener()
+    {
+        toggle_Button_1=(ToggleButton)findViewById(R.id.toggle_button_1);
+        toggle_Button_2=(ToggleButton)findViewById(R.id.toggle_button_2);
+        button1=(Button)findViewById(R.id.button1);
+
+        button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 StringBuffer result= new StringBuffer();
-                result.append("Toggle Button 1:").append(toggle_button_1.getText());
-                result.append("\n Toggle Button 2: ").append(toggle_button_2.getText());
+                result.append("Toggle Button1:").append(toggle_Button_1.getText());
+                result.append(" \n Toggle Button 2:").append(toggle_Button_2.getText());
                 Toast.makeText(MainActivity.this,result.toString(),Toast.LENGTH_SHORT).show();
+
+
+
             }
         });
 
 
-
     }
+
 
 }

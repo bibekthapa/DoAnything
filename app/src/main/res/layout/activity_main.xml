@@ -6,21 +6,23 @@
     android:orientation="vertical"
     tools:context="com.example.android.doanything.MainActivity">
 
-   <ToggleButton
-       android:id="@+id/toggle_btn_1"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content" />
     <ToggleButton
-        android:id="@+id/toggle_btn_2"
+        android:id="@+id/toggle_button_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ToggleButton
+        android:id="@+id/toggle_button_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textOn="@string/toggle_turn_on"
         android:textOff="@string/toggle_turn_off"
-        android:checked="true"/>
+        android:textOn="@string/toggle_turn_on" />
+
     <Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Display"/>
+
 
 </LinearLayout>
