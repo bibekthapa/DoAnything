@@ -14,8 +14,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         int num[]={0,1,2,3,4,5}; // int[] num    and    int num[]  both are same but int[] num is preferred.
-        for(int i=0;i<num.length;i++) {
-            Log.v("LogExample", String.valueOf(num[i]));
+        for(int i=0;i<num.length;i++) {   //we can write for(int i: num){ Log.v("LogExample", String.valueOf(num[i]));     }
+            Log.v("LogExample", String.valueOf(num[i])); //Here both the paramaeter is needed in the string , so the later value is changed from int to String type
+
         }
 
 
