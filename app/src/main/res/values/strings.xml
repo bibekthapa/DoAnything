@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DoAnything</string>
+    <string name="toggle_turn_on">Turn ON</string>
+    <string name="toggle_turn_off">Turn OFF</string>
+</resources>
